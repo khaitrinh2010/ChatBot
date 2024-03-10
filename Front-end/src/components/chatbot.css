@@ -1,0 +1,137 @@
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    margin: 0;
+    color: #A64AC9; /* Changed to a shade of pink */
+}
+
+.description {
+    margin-top: 10px;
+    color: #D291BC; /* Lighter pink for a softer contrast */
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    border: 2px solid #F4C2C2; /* Soft pink border */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Added shadow for 3D effect */
+}
+
+.conversation {
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #FBE4E6; /* Very light pink background */
+}
+
+.chatbot-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #E3879E; /* Vibrant pink for the avatar */
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* Softer shadow for a subtle 3D effect */
+    transition: transform 0.2s; /* Smooth transformation on hover */
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #FF69B4; /* Bright pink for user messages */
+    color: white;
+    transform: translateY(-2px); /* Slight raise effect on hover for 3D feel */
+}
+
+.message.assistant {
+    align-self: flex-start;
+    background-color: #FADADD; /* Soft pink for assistant messages */
+    color: #333;
+}
+
+.input-area {
+    display: flex;
+    padding: 12px;
+    background-color: #fff;
+    border-top: 2px solid #FADADD; /* Matching the assistant message color */
+}
+
+.input-message {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #F4C2C2; /* Soft pink border for input */
+    border-radius: 15px;
+    margin-right: 8px;
+}
+
+.send-btn {
+    background-color: #FF69B4; /* Matching user message color for consistency */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.1s;
+}
+
+.send-btn:hover {
+    background-color: #E3879E; /* Slightly lighter pink on hover */
+    transform: scale(1.05); /* Slight enlargement for interactive feedback */
+}
+
+.conversation::-webkit-scrollbar {
+    width: 8px;
+}
+
+.conversation::-webkit-scrollbar-track {
+    background: #FBE4E6; /* Scrollbar track to match conversation background */
+}
+
+.conversation::-webkit-scrollbar-thumb {
+    background: #FFC0CB; /* Classic pink scrollbar thumb */
+    border-radius: 4px;
+}
+
+.conversation::-webkit-scrollbar-thumb:hover {
+    background: #FF69B4; /* Brighter pink on hover for visual feedback */
+}
+
+.typing-indicator::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #FF69B4; /* Use the main pink color for consistency */
+    border-radius: 50%;
+    animation: typing-indicator-blink 1.4s infinite both;
+}
+
+.typing-indicator::after {
+    content: 'typing...';
+    margin-left: 12px;
+    color: #A64AC9; /* Use a shade of pink for the text to fit the theme */
+}
+
+@keyframes typing-indicator-blink {
+    0%, 100% { opacity: .2; }
+    50% { opacity: 1; }
+}

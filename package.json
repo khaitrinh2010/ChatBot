@@ -1,0 +1,22 @@
+{
+  "name": "enter",
+  "version": "1.0.0",
+  "description": "Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "start:frontend": "cd front-end && npm run dev",
+    "dev": "concurrently \"npm start\" \"npm run start:frontend\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tanstack/react-query": "^5.25.0",
+    "axios": "^1.6.7",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
